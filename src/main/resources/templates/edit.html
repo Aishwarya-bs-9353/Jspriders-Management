@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<form action="add" method="post">
+			<input type="hidden" name="id" th:value="${edit.id}">
+			Name: <input type="text" name="name" th:value="${edit.name}"> <br><br>
+			Branch: <input type="text" name="branch" th:value="${edit.branch}"> <br><br>
+			Location: <input type="text" name="location" th:value="${edit.location}"> <br><br>
+			<button>ADD</button>
+		</form>
+	</div>
+</body>
+</html>

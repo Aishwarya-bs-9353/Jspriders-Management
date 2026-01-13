@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Branch</th>
+				<th>Location</th>
+				<th>Manage</th>
+			</tr>
+			
+			<tr th:each="jspdata:${jsp}">
+				<td th:text="${jspdata.name}"></td>
+				<td th:text="${jspdata.branch}"></td>
+				<td th:text="${jspdata.location}"></td>
+				<td>
+					<a th:href="'/edit?id='+${jspdata.id}"> <button>EDIT</button></a>
+					<a th:href="'/delete?id='+${jspdata.id}"> <button>DELETE</button></a>
+				</td>
+			</tr>
+		</table>
+	
+	</div>
+	
+<script th:if="${message}">
+	alert("[[${message}]]")
+</script>
+</body>
+</html>
